@@ -7,7 +7,7 @@ class BasePageLocators():
     BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-group .btn.btn-default")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
-class  LoginPageLocators():
+class LoginPageLocators():
     LOGIN_URL = (By.CSS_SELECTOR, "#login_link")
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
