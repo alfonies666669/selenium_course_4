@@ -5,6 +5,14 @@ import pytest
 import random
 import time
 
+@pytest.mark.parametrize('links', ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])                                                             
+def test_guest_click_button_basket(browser, links): 
+    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{links}"
+    page = ProductPage(browser, link)
+    page.open()
+    page.click_button_basket()
+    print (browser.current_url)
+	
 @pytest.mark.xfail(reason="wrong message")
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
